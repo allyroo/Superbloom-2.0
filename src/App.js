@@ -1,14 +1,13 @@
-import "./App.css";
-
-// import background from "";
-import DashGrid from "./components/Dashboard/DashGrid";
+import React, { useState, useEffect } from "react";
+import "./index.css";
+import ContentFrame from "./components/ContentFrame";
+import DashGrid from "./components/DashGrid";
 
 function App() {
   return (
-    <div>
+    <div className="body">
+      <ContentFrame />
       <DashGrid />
-      {/* // <div style={{ backgroundImage: `url`}}> */}
-      Hello
     </div>
   );
 }

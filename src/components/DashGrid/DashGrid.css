@@ -1,0 +1,137 @@
+/* .dashboard {
+  font-family: "Roboto", "Helvetica Neue";
+  min-height: 100vh;
+  display: flex;
+  background: rgb(26, 26, 1);
+} */
+
+.container {
+  width: 80%;
+  text-align: center;
+}
+
+/* creating grid */
+.dashboard {
+  width: 80%;
+  height: 75%;
+  display: grid;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(18, 1fr);
+  grid-gap: 1rem;
+}
+
+#gridContainer {
+  background-color: rgb(255, 255, 255);
+  grid-column-start: 5;
+  grid-column-end: 18;
+  grid-row-start: 1;
+  grid-row-end: 19;
+  border-radius: 10px;
+  border-color: black;
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(18, 1fr);
+}
+
+#quote {
+  padding: 20px;
+  color: white;
+  background-color: rgb(227, 216, 230);
+  grid-column-start: 2;
+  grid-column-end: 12;
+  grid-row-start: 2;
+  grid-row-end: 5;
+  border-radius: 10px;
+  text-align: center;
+}
+#week {
+  background-color: rgb(255, 255, 255);
+  grid-column-start: 2;
+  grid-column-end: 12;
+  grid-row-start: 5;
+  grid-row-end: 7;
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.day {
+  height: 60px;
+  width: 60px;
+  padding: 15px;
+  margin: 4px;
+  background-color: rgb(216, 193, 224);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#smart {
+  padding: 20px;
+  color: white;
+  background-color: rgb(227, 216, 230);
+  grid-column-start: 2;
+  grid-column-end: 12;
+  grid-row-start: 7;
+  grid-row-end: 13;
+  border-radius: 10px;
+  text-align: center;
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#smartBar {
+  color: rgb(227, 216, 230);
+  color: white;
+  padding: 20px;
+  background-color: rgb(227, 216, 230);
+  grid-column-start: 2;
+  grid-column-end: 12;
+  grid-row-start: 14;
+  grid-row-end: 18;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#toDo {
+  color: white;
+  padding: 20px;
+  background-color: rgb(227, 216, 230);
+  grid-column-start: 13;
+  grid-column-end: 18;
+  grid-row-start: 2;
+  grid-row-end: 11;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#progress {
+  color: rgb(227, 216, 230);
+  padding: 20px;
+  background-color: rgb(227, 216, 230);
+  color: white;
+  grid-column-start: 13;
+  grid-column-end: 18;
+  grid-row-start: 12;
+  grid-row-end: 18;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#background-wrap {
+  bottom: 0;
+  left: 0;
+  padding-top: 50px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  box-shadow: 2px 2px #a5a5a5;
+}
