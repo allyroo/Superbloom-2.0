@@ -1,0 +1,13 @@
+import "./QuoteAPI.css";
+
+function Quote() {
+  fetch("https://type.fit/api/quotes")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.querySelector(".quote").dangerouslySetInnerHTML = data.text;
+    });
+}
+
+export default Quote;
