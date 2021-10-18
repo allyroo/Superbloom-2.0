@@ -1,33 +1,23 @@
 .Quote {
-  color: red;
-  font-size: 10px;
+  font-family: "Raleway", sans-serif;
+  color: black;
+  font-size: 1.4vw;
   display: flex;
-  justify-content: center;
-  min-height: 100vh;
-}
-.quote {
-  color: white;
-}
 
-.author {
-  color: white;
+  word-wrap: break-word;
 }
 
 .quoteBox {
-  position: absolute;
-}
+  padding: 20px;
+  border-left: 20px solid rgb(122, 93, 131);
 
-.quoteButton {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
 }
-
-button {
-  background-color: lavender;
-  border-radius: 3px;
-  display: inline-block;
+.quote {
+  text-align: left;
   color: black;
-  font-family: Arial;
-  font-size: 5px;
+}
+
+.author {
+  text-align: right;
+  color: rgb(155, 97, 155);
 }

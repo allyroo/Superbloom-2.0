@@ -1,5 +1,6 @@
 import "./DashGrid.css";
 import Quote from "../Quote";
+import SMARTGoal from "../SMARTGoal";
 
 // getQuote(api_url)
 function DashGrid() {
@@ -34,6 +35,7 @@ function DashGrid() {
         </div>
         <div id="smart" style={{ zIndex: 3 }}>
           Smart Goal + Add/Change Smart Goal
+          <SMARTGoal />
         </div>
         <div id="smartBar" style={{ zIndex: 3 }}>
           Smart Goal Progress Bar
