@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./SMARTGoal.css";
 import { Button, Modal, Typography, Box } from "@material-ui/core";
 
 const style = {
@@ -13,17 +14,50 @@ const style = {
   p: 4,
 };
 
+const goalStyle = {
+  border: "2px solid #FF0000",
+};
+
 function SMARTGoal() {
-  const [goal, setGoal] = useState("I will drink 5 glasses of water each day.");
-  const [category, setCategory] = useState("Nutrition");
+  const [addGoal, setAddGoal] = useState(false);
+  // const [category, setCategory] = useState("Nutrition");
+  const [goalArr, setGoalArr] = useState([]);
+  const [goal, setGoal] = useState("");
+
+  const handleChange = (e) => {
+    setGoal(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    setGoalArr((arr) => [...arr, goal]);
+    e.preventDefault();
+    setGoal("");
+  };
+
+  const [showButton, setShowButton] = useState(true);
+
+  const toggleAdd = () => {
+    setAddGoal(!addGoal);
+    setShowButton(!showButton);
+  };
+
+  //Modal
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   return (
     <div>
-      {goal} <br /> {category}
-      <Button onClick={handleOpen}>Open modal</Button>
+      <ul>
+        {goalArr.map((goal) => {
+          return <li>{goal}</li>;
+        })}
+      </ul>
+      <Typography variant="h3">{goal} </Typography>
+      <br />
+      <Button variant="contained" onClick={handleOpen}>
+        Set New Goal
+      </Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -32,17 +66,36 @@ function SMARTGoal() {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
+            {showButton ? (
+              <Button onClick={toggleAdd}>Click to edit your goal</Button>
+            ) : null}
+            {addGoal ? (
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  value={goal}
+                  placeholder="Think S.M.A.R.T."
+                  onChange={handleChange}
+                />
+                <br />
+              </form>
+            ) : null}
           </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+          <Button variant="contained" type="submit">
+            Add Goal
+          </Button>
+          <Button variant="contained" onClick={handleClose}>
+            Close
+          </Button>
+          {/* <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             <form>
               <label>
-                Name:
+                Enter Here:
                 <input type="text" name="name" />
               </label>
-              <input type="submit" value="Submit" />
+              <input className="goalOfTheWeek" type="submit" value="Submit" />
             </form>
-          </Typography>
+          </Typography> */}
         </Box>
       </Modal>
     </div>

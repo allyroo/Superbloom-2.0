@@ -10,7 +10,7 @@ function DashGrid() {
         <div id="quote" style={{ zIndex: 3 }}>
           <Quote />
         </div>
-        <div id="week" style={{ zIndex: 3 }}>
+        {/* <div id="week" style={{ zIndex: 3 }}>
           <span className="day" style={{ zIndex: 3 }}>
             SU
           </span>
@@ -32,9 +32,9 @@ function DashGrid() {
           <span className="day" style={{ zIndex: 3 }}>
             SA
           </span>
-        </div>
+        </div> */}
         <div id="smart" style={{ zIndex: 3 }}>
-          Smart Goal + Add/Change Smart Goal
+          
           <SMARTGoal />
         </div>
         <div id="smartBar" style={{ zIndex: 3 }}>

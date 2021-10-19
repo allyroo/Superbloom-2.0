@@ -9,10 +9,11 @@
 
 .quoteBox {
   padding: 20px;
-  border-left: 20px solid rgb(122, 93, 131);
 
+  /* border-bottom: 20px solid rgb(122, 93, 131); */
 }
 .quote {
+  font-weight: 700;
   text-align: left;
   color: black;
 }

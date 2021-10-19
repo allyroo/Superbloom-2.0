@@ -1,0 +1,12 @@
+h2 {
+  color: black;
+}
+
+li {
+  list-style-type: none;
+  font-size: 50px;
+}
+
+ul {
+  font-size: 50px;
+}
