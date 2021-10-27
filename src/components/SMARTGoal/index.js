@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import "./SMARTGoal.css";
 import { Button, Modal, Typography, Box } from "@material-ui/core";
+import {
+  createTheme,
+  responsiveFontSizes,
+  ThemeProvider,
+} from "@mui/material/styles";
+
+let theme = createTheme();
+theme = responsiveFontSizes(theme);
 
 const style = {
   position: "absolute",
@@ -48,46 +56,45 @@ function SMARTGoal() {
 
   return (
     <div>
-      <ul>
-        {goalArr.map((goal) => {
-          return <li>{goal}</li>;
-        })}
-      </ul>
-      <Typography variant="h3">{goal} </Typography>
-      <br />
-      <Button variant="contained" onClick={handleOpen}>
-        Set New Goal
-      </Button>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            {showButton ? (
-              <Button onClick={toggleAdd}>Click to edit your goal</Button>
-            ) : null}
-            {addGoal ? (
-              <form onSubmit={handleSubmit}>
-                <input
-                  type="text"
-                  value={goal}
-                  placeholder="Think S.M.A.R.T."
-                  onChange={handleChange}
-                />
-                <br />
-              </form>
-            ) : null}
-          </Typography>
-          <Button variant="contained" type="submit">
-            Add Goal
-          </Button>
-          <Button variant="contained" onClick={handleClose}>
-            Close
-          </Button>
-          {/* <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+      <ThemeProvider theme={theme}>
+        <ul>
+          {goalArr.map((goal) => {
+            return <li>{goal}</li>;
+          })}
+        </ul>
+        <Typography variant="h4">{goal} </Typography>
+        <br />
+        <Button variant="contained" onClick={handleOpen}>
+          Set New Goal
+        </Button>
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <Typography id="modal-modal-title" variant="h6" component="h2">
+              {showButton ? (
+                <Button onClick={toggleAdd}>Click to edit your goal</Button>
+              ) : null}
+              {addGoal ? (
+                <form onSubmit={handleSubmit}>
+                  <input
+                    type="text"
+                    value={goal}
+                    placeholder="Think S.M.A.R.T."
+                    onChange={handleChange}
+                  />
+                  <br />
+                </form>
+              ) : null}
+            </Typography>
+            <Button variant="contained" type="submit" onClick={handleClose}>
+              Add Goal
+            </Button>
+
+            {/* <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             <form>
               <label>
                 Enter Here:
@@ -96,8 +103,9 @@ function SMARTGoal() {
               <input className="goalOfTheWeek" type="submit" value="Submit" />
             </form>
           </Typography> */}
-        </Box>
-      </Modal>
+          </Box>
+        </Modal>
+      </ThemeProvider>
     </div>
     // <div style={{ flexDirection: "column", display: "flex" }}>
     //   <input placeholder="goal" onChange={(e) => setGoal(e.target.value)} />

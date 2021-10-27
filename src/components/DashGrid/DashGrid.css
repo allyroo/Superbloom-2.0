@@ -124,7 +124,6 @@
 
 #toDo {
   color: black;
-  padding: 20px;
   background: rgb(212, 212, 255);
   background: linear-gradient(
     90deg,
@@ -134,10 +133,19 @@
   grid-column-start: 13;
   grid-column-end: 18;
   grid-row-start: 2;
-  grid-row-end: 11;
+  grid-row-end: 13;
   border-radius: 10px;
-  text-align: center;
+  display: flex;
   box-shadow: 10px 10px 50px rgb(189, 187, 187);
+}
+
+#taskList {
+  background: white;
+  grid-column-start: 13;
+  grid-column-end: 18;
+  grid-row-start: 5;
+  grid-row-end: 13;
+  border-radius: 0px 0px 10px 10px;
 }
 
 #progress {
@@ -152,7 +160,7 @@
   color: black;
   grid-column-start: 13;
   grid-column-end: 18;
-  grid-row-start: 12;
+  grid-row-start: 14;
   grid-row-end: 18;
   border-radius: 10px;
   text-align: center;

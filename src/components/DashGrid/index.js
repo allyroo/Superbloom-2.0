@@ -1,6 +1,7 @@
 import "./DashGrid.css";
 import Quote from "../Quote";
 import SMARTGoal from "../SMARTGoal";
+import ToDo from "../ToDo";
 
 // getQuote(api_url)
 function DashGrid() {
@@ -34,15 +35,19 @@ function DashGrid() {
           </span>
         </div> */}
         <div id="smart" style={{ zIndex: 3 }}>
-          
           <SMARTGoal />
         </div>
         <div id="smartBar" style={{ zIndex: 3 }}>
           Smart Goal Progress Bar
         </div>
-        <div id="toDo" style={{ zIndex: 3 }}>
-          To-Do List
-        </div>
+        <div id="toDo" style={{ zIndex: 3 }}></div>
+          <div id="taskCounter" style={{ zIndex: 4 }}>
+            
+          </div>
+          <div id="taskList" style={{ zIndex: 4 }}>
+            
+          </div>
+        
         <div id="progress" style={{ zIndex: 3 }}>
           Category History
         </div>
