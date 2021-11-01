@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 function Navigation(props) {
     return (
-        <div className="navigation">
+        <div className="container">
             
         </div>
     )

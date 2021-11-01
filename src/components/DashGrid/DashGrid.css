@@ -5,10 +5,7 @@
   background: rgb(26, 26, 1);
 } */
 
-.container {
-  width: 80%;
-  text-align: center;
-}
+
 
 /* creating grid */
 .dashboard {
@@ -25,8 +22,8 @@
 }
 
 #gridContainer {
-  background-color: rgb(249, 245, 245);
-  grid-column-start: 5;
+  background-color: rgb(255, 251, 251);
+  grid-column-start:3;
   grid-column-end: 18;
   grid-row-start: 1;
   grid-row-end: 19;
@@ -123,6 +120,10 @@
 }
 
 #toDo {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
   color: black;
   background: rgb(212, 212, 255);
   background: linear-gradient(
@@ -176,4 +177,8 @@
   top: 0;
   z-index: -1;
   box-shadow: 2px 2px #a5a5a5;
+}
+
+#navdash {
+  color:black;
 }

@@ -86,7 +86,6 @@ function SMARTGoal() {
                     placeholder="Think S.M.A.R.T."
                     onChange={handleChange}
                   />
-                  <br />
                 </form>
               ) : null}
             </Typography>

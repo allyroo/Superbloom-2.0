@@ -40,14 +40,15 @@ function DashGrid() {
         <div id="smartBar" style={{ zIndex: 3 }}>
           Smart Goal Progress Bar
         </div>
-        <div id="toDo" style={{ zIndex: 3 }}></div>
-          <div id="taskCounter" style={{ zIndex: 4 }}>
-            
-          </div>
-          <div id="taskList" style={{ zIndex: 4 }}>
-            
-          </div>
-        
+        <div id="toDo" style={{ zIndex: 3 }}>
+          Smart Goal Action
+          <br /> To-Do List
+        </div>
+        <div id="taskCounter" style={{ zIndex: 4 }}></div>
+        <div id="taskList" style={{ zIndex: 4 }}>
+          <ToDo />
+        </div>
+
         <div id="progress" style={{ zIndex: 3 }}>
           Category History
         </div>
