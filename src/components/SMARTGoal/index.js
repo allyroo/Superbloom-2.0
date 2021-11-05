@@ -28,7 +28,7 @@ import { Button, Modal } from "react-bootstrap";
 // };
 
 function SMARTGoal() {
-  const [addGoal, setAddGoal] = useState(false);
+  // const [addGoal, setAddGoal] = useState(false);
   // const [category, setCategory] = useState("Nutrition");
   const [goalArr, setGoalArr] = useState([]);
   const [goal, setGoal] = useState("");
@@ -42,7 +42,6 @@ function SMARTGoal() {
     e.preventDefault();
     setGoal("");
   };
-
 
   //Modal
   const [open, setOpen] = React.useState(false);
