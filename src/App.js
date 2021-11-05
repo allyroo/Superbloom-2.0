@@ -9,24 +9,28 @@ import DashGrid from "./components/DashGrid";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Route path="/" exact>
-        <ContentFrame />
-        <DashGrid />
-      </Route>
-      <Route path="/about" exact>
-        <About />
-        <ContentFrame />
-      </Route>
-      <Route path="/signup">
-        <SignUp />
-        <ContentFrame />
-      </Route>
-      <Route path="/login">
-        <Login />
-        <ContentFrame />
-      </Route>
-    </BrowserRouter>
+    <div>
+      <ContentFrame />
+      <DashGrid />
+    </div>
+    // <BrowserRouter>
+    //   <Route path="/" exact>
+    //     <ContentFrame />
+    //     <DashGrid />
+    //   </Route>
+    //   <Route path="/about" exact>
+    //     <About />
+    //     <ContentFrame />
+    //   </Route>
+    //   <Route path="/signup">
+    //     <SignUp />
+    //     <ContentFrame />
+    //   </Route>
+    //   <Route path="/login">
+    //     <Login />
+    //     <ContentFrame />
+    //   </Route>
+    // </BrowserRouter>
   );
 }
 
