@@ -38,7 +38,7 @@ const ToDo = () => {
     },
     {
       text: "Buy meal prep containers",
-      isCompleted: false,
+      isCompleted: true,
     },
   ]);
 

@@ -31,7 +31,9 @@ function SMARTGoal() {
   // const [addGoal, setAddGoal] = useState(false);
   // const [category, setCategory] = useState("Nutrition");
   const [goalArr, setGoalArr] = useState([]);
-  const [goal, setGoal] = useState("");
+  const [goal, setGoal] = useState(
+    "I will eat the meals I've prepared for lunch for at least 3 days."
+  );
 
   const handleChange = (e) => {
     setGoal(e.target.value);
