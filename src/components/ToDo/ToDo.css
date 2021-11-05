@@ -23,12 +23,13 @@
 
 .todo {
   width: 100%;
-  background: rgb(219, 180, 235);
+  background: rgb(237, 223, 238);
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   padding: 3px 10px;
   font-size: 1em;
   margin-bottom: 6px;
   border-radius: 3px;
+  border: 1px dotted #000;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,7 +71,7 @@ input {
   flex: 1;
 }
 
-form {
+.taskForm {
   position: absolute;
   border-top: 1px solid;
   display: flex;

@@ -5,8 +5,6 @@
   background: rgb(26, 26, 1);
 } */
 
-
-
 /* creating grid */
 .dashboard {
   width: 80%;
@@ -23,7 +21,7 @@
 
 #gridContainer {
   background-color: rgb(255, 251, 251);
-  grid-column-start:3;
+  grid-column-start: 3;
   grid-column-end: 18;
   grid-row-start: 1;
   grid-row-end: 19;
@@ -180,5 +178,5 @@
 }
 
 #navdash {
-  color:black;
+  color: black;
 }

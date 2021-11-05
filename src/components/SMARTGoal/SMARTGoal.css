@@ -10,3 +10,11 @@ li {
 ul {
   font-size: 50px;
 }
+
+.sGoal {
+  font-size: 2em;
+  background: rgb(237, 223, 238);
+  border-radius: 20px;
+  border: black dashed 1px;
+  padding: 0.1em;
+}

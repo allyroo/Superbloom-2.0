@@ -5,13 +5,11 @@ import {
   faQuestionCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
 
 function ContentFrame() {
   return (
     <div className="contentFrame" style={{ zIndex: 1 }}>
       <div className="homeTab tabs">
-        
         <FontAwesomeIcon icon={faSignInAlt} />
       </div>
       <div className="dashTab tabs">

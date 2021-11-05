@@ -1,5 +1,10 @@
 .contentFrame {
-  background-color: rgb(199, 186, 224);
+  background: rgb(212, 212, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(212, 212, 255, 1) 32%,
+    rgba(230, 209, 255, 1) 100%
+  );
   border-radius: 30px;
   position: absolute;
   display: grid;
@@ -23,16 +28,12 @@
   transition-timing-function: linear;
 }
 
-
-
 .homeTab {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 3;
   grid-row-end: 7;
 }
-
-
 
 .dashTab {
   grid-column-start: 1;
