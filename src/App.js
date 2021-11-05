@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import "./index.css";
 import About from "./components/About";
 import SignUp from "./components/Auth/SignUp";
@@ -10,24 +10,22 @@ import DashGrid from "./components/DashGrid";
 function App() {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route path="/" exact>
-          <ContentFrame />
-          <DashGrid />
-        </Route>
-        <Route path="/about" exact>
-          <About />
-          <ContentFrame />
-        </Route>
-        <Route path="/signup">
-          <SignUp />
-          <ContentFrame />
-        </Route>
-        <Route path="/login">
-          <Login />
-          <ContentFrame />
-        </Route>
-      </Switch>
+      <Route path="/" exact>
+        <ContentFrame />
+        <DashGrid />
+      </Route>
+      <Route path="/about" exact>
+        <About />
+        <ContentFrame />
+      </Route>
+      <Route path="/signup">
+        <SignUp />
+        <ContentFrame />
+      </Route>
+      <Route path="/login">
+        <Login />
+        <ContentFrame />
+      </Route>
     </BrowserRouter>
   );
 }
