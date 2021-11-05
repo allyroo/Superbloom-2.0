@@ -43,12 +43,6 @@ function SMARTGoal() {
     setGoal("");
   };
 
-  const [showButton, setShowButton] = useState(true);
-
-  const toggleAdd = () => {
-    setAddGoal(!addGoal);
-    setShowButton(!showButton);
-  };
 
   //Modal
   const [open, setOpen] = React.useState(false);
